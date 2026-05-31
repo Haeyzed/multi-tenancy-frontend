@@ -1,15 +1,20 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google"
+import { Inter, Geist_Mono } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'})
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 
 const fontMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
 })
+
+export const metadata = {
+  title: "Central Admin | Multi-Tenancy",
+  description: "Platform administration dashboard for multi-tenant SaaS.",
+}
 
 export default function RootLayout({
   children,
